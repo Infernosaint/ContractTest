@@ -35,5 +35,30 @@ public class BackendManagerTest {
     
     assertEquals(departures.size(), 4);
     }
+  @Test
+  public void testListMembers4() {
+    assumeThat(manager, not(nullValue()));
+    
+    Collection<DepartureDetail> departures = manager.getDepartures(new LineIdentifier(1), new Date());
+    
+    assertEquals(departures.size(), 4);
+    }
+  @Test
+  public void testListMembers3() {
+    assumeThat(manager, not(nullValue()));
+    
+    Collection<DepartureDetail> departures = manager.getDepartures(new LineIdentifier(1), new Date());
+    
+    assertEquals(departures.size(), 4);
+    }
+  @Test
+  public void testListMembers1() {
+    assumeThat(manager, not(nullValue()));
+    
+    Collection<DepartureDetail> departures = manager.getDepartures(new LineIdentifier(1), new Date());
+    
+    assertEquals(departures.size(), 4);
+    }
+  
     
 }
