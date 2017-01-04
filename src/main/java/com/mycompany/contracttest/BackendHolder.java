@@ -5,10 +5,13 @@
  */
 package com.mycompany.contracttest;
 
+import interfaces.CustomerInterface;
+
 /**
  *
  * @author Infernosaint
  */
-public class NewClass {
+public class BackendHolder {
+    public static CustomerInterface manager;
     
 }
