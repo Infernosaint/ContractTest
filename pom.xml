@@ -5,6 +5,7 @@
     <artifactId>ContractTest</artifactId>
     <version>1</version>
     <packaging>jar</packaging>
+    <name>ContractTest</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -28,8 +29,6 @@
             <artifactId>FerryProjectContract</artifactId>
             <version>1.0-20170103.155036-8</version>
         </dependency>
-
-
         <dependency>
             <groupId>org.glassfish.jersey.core</groupId>
             <artifactId>jersey-server</artifactId>
@@ -139,5 +138,5 @@
 
     </plugins>
   </build>
-    <name>ContractTest</name>
+    
 </project>
