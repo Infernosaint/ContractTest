@@ -38,5 +38,13 @@ public class BackendManagerTest {
         assertThat(departures, not(nullValue()));
         assertTrue(departures.size() >= 1);
     }
-    
+    @Test
+    public void testUpdateReservation() {
+        assumeThat(manager, not(nullValue()));
+
+        Collection<DepartureDetail> departures = manager.getDepartures(new LineIdentifier(1), new Date());
+
+        assertThat(departures, not(nullValue()));
+        assertTrue(departures.size() >= 1);
+    }
 }
