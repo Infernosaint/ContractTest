@@ -25,8 +25,7 @@ public class BackendManagerTest {
     Collection<DepartureDetail> departures = manager.getDepartures(new LineIdentifier(1), new Date());
     
     assertThat(departures, not(nullValue()));
-    System.out.println(departures.iterator().next().getDepartureTime());
-    assertEquals("a", "d");
+    assertThat(departures.iterator().next(), not(nullValue()));
     }
   @Test
   public void testListMembers2() {
@@ -34,9 +33,7 @@ public class BackendManagerTest {
     
     Collection<DepartureDetail> departures = manager.getDepartures(new LineIdentifier(1), new Date());
     
-    assertThat(departures, not(nullValue()));
-        
-    assertEquals("a", "d");
+    assertEquals(departures.size(), 4);
     }
     
 }
