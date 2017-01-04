@@ -28,5 +28,15 @@ public class BackendManagerTest {
         
     assertEquals("a", "d");
     }
+  @Test
+  public void testListMembers2() {
+    assumeThat(manager, not(nullValue()));
+    
+    Collection<DepartureDetail> departures = manager.getDepartures(new LineIdentifier(1), new Date());
+    
+    assertThat(departures, not(nullValue()));
+        
+    assertEquals("a", "d");
+    }
     
 }
