@@ -10,6 +10,7 @@ import generalstuff.DepartureDetail;
 import generalstuff.LineIdentifier;
 import java.util.Collection;
 import java.util.Date;
+import static junit.framework.TestCase.assertEquals;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.CoreMatchers.nullValue;
 import org.junit.Test;
@@ -24,7 +25,8 @@ public class BackendManagerTest {
     Collection<DepartureDetail> departures = manager.getDepartures(new LineIdentifier(1), new Date());
     
     assertThat(departures, not(nullValue()));
-        System.out.print("Hello "); 
+        
+    assertEquals("a", "d");
     }
     
 }
