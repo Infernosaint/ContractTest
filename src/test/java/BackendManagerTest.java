@@ -24,6 +24,7 @@ public class BackendManagerTest {
     Collection<DepartureDetail> departures = manager.getDepartures(new LineIdentifier(1), new Date());
     
     assertThat(departures, not(nullValue()));
+        System.out.print("Hello "); 
     }
     
 }
