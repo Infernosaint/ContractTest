@@ -57,10 +57,11 @@ public class BackendManagerTest {
         assumeTrue(departures.size() >= 1);
         String customerName = "Kaloyan";
         DepartureIdentifier depId = new DepartureIdentifier(departures.iterator().next().getId());
-        ReservationDetail resDet = manager.saveReservation(depId, 1, 1, 1, 0, 0, customerName);
+        ReservationDetail resDet = manager.saveReservation(depId, 2, 3, 1, 0, 0, customerName);
+        System.out.println(resDet.getId());
         assertEquals(resDet.getCustomerName(), customerName);
         customerName = "Mads";
-        resDet = manager.updateReservation(new ReservationIdentifier(0), depId, 0, 0, 0, 0, 0, customerName);
+        resDet = manager.updateReservation(new ReservationIdentifier(resDet.getId()), depId, 0, 0, 0, 0, 0, customerName);
         assertEquals(resDet.getCustomerName(), customerName);
         assertEquals(customerName, manager.getReservation(new ReservationIdentifier(resDet.getId())).getCustomerName());
     }
